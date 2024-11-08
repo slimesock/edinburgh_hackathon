@@ -64,28 +64,27 @@ The hackathon is designed to give you hands-on experience with:
 
 ### Prerequisites
 
-You’ll need:  
-- **Python 3.8+**  
-- **Pip** for package management  
-- **SoundDevice** for audio capture  
-- **PyTorch** for ASR  
-- **Whisper** model for transcription  
-- **Neuphonic SDK** for TTS  
-- **Ollama** for LLM chat functionality  
-- **Keyboard** library for input handling  
+You will need **Python3.8+**, **pip** and [Ollama](https://ollama.com/) with [llama3.1:latest](https://ollama.com/library/llama3.1)
+installed.
+
+Ollama is a tool that you can use to run LLMs locally on your laptop.
+To download Ollama, use the link above. 
+Then start the application, and enter the command `ollama run llama3.1:latest` in your terminal
+to download and run the `llama:3.1 8b` model locally.
 
 ### Installation
 
 Clone the repository:  
 ```bash
-git clone https://github.com/your-repo/conversational-ai-hackathon.git
-cd conversational-ai-hackathon
+git clone https://github.com/neuphonic/edinburgh_hackathon.git
+cd edinburgh_hackathon
 ```
 
-Install dependencies:
+Create a virtual environment and install the dependencies:
 
 ```bash
-Copy code
+python -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -112,12 +111,22 @@ The **Whisper ASR** module converts real-time speech to text.
 **Key Functionality:**  
 - `speech_recognition()`: Streams and transcribes audio in real-time, detecting sentence completions.
 
+Test this out with
+```python
+python whisper_speech_recognition.py
+```
+
 ### Text-to-Speech (TTS)
 
 The **Text-to-Speech** module leverages Neuphonic’s API for generating high-quality audio.
 
 **Key Functionality:**  
 - `neuphonic_tts(input_text)`: Converts input text into speech and plays it.
+
+Test this out with
+```python
+python neuphonic_texttospeech.py
+```
 
 ### Large Language Model (LLM)
 
@@ -126,12 +135,15 @@ The **LLM** module provides conversational responses using a lightweight languag
 **Key Functionality:**  
 - `language_model_chat(user_input)`: Processes conversational context and generates concise, friendly replies.
 
-### Main Program
+Test this out with
+```python
+python ollama_llm.py
+```
 
-The **Main** program integrates ASR, TTS, and LLM for a seamless conversational experience:  
-1. Activate transcription with the **space key**.  
-2. Transcribe speech, generate responses, and convert them to speech.  
-3. Engage in real-time conversation.
+### Main Program
+The **Main** program integrates ASR, TTS, and LLM for a seamless conversational experience: 
+1. Transcribe speech, generate responses, and convert them to speech.  
+2. Engage in real-time conversation.
 
 ---
 
@@ -146,11 +158,10 @@ The **Main** program integrates ASR, TTS, and LLM for a seamless conversational 
 
 ## Interaction Flow
 
-1. **Press the space key** to begin recording your voice.
-2. Speak into the microphone, and the system will transcribe your speech in real time.
-3. The transcribed text is sent to the LLM to generate a response.
-4. The response is converted to speech using the TTS module and played back to you.
-5. Repeat the process to continue the conversation.
+1. Speak into the microphone, and the system will transcribe your speech in real time.
+2. The transcribed text is sent to the LLM to generate a response.
+3. The response is converted to speech using the TTS module and played back to you.
+4. Repeat the process to continue the conversation.
 
 ---
 

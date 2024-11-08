@@ -1,12 +1,20 @@
 import ollama
 
+
 def language_model_chat(user_input, PROMPT=None):
-    model = 'llama3.1:latest'
-    stream = ollama.chat(model=model, messages=[{'role': 'system', 'content': PROMPT}, {'role': 'user', 'content': user_input}], stream=True)
-    
+    model = "llama3.1:latest"
+    stream = ollama.chat(
+        model=model,
+        messages=[
+            {"role": "system", "content": PROMPT},
+            {"role": "user", "content": user_input},
+        ],
+        stream=True,
+    )
+
     output = ""
     for chunk in stream:
-        output += chunk['message']['content']
+        output += chunk["message"]["content"]
     return output
 
 
@@ -17,7 +25,7 @@ if __name__ == "__main__":
                 Youy will be given the full conversational history, but only output your answer, and nothing else.
                 Keep responses less than 10 words. No emojis.
                 """
-    
+
     while True:
         user_input = input("User Input: ")
         print(user_input)
