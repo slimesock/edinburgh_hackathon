@@ -25,7 +25,9 @@ If asked about anything unrelated to the surgery or outside the provided informa
 """
 
 if __name__ == "__main__":
-    neuphonic_tts("Hello! Welcome to our dental surgery in Kings Cross. How can I assist you today?")
+    neuphonic_tts(
+        "Hello! Welcome to our dental surgery in Kings Cross. How can I assist you today?"
+    )
 
     conversation_history = " "
     while True:
