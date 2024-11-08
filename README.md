@@ -16,19 +16,19 @@ Email {sohaib, jiameng, rachel}@neuphonic.com if you need any help!
 
 Your project will be judged based on the following criteria:
 
-1. **Functionality (25%)**
+1. **Functionality (15%)**
    - How well does the solution perform its intended task?  
    - Does the conversational AI respond appropriately and handle various inputs effectively?
 
-2. **Innovation & Creativity (20%)**
+2. **Innovation & Creativity (40%)**
    - Is the idea unique, or does it improve upon existing solutions?  
    - Does it demonstrate creative use of conversational AI technology?
 
-3. **User Experience (20%)**
+3. **User Experience (15%)**
    - Is the AI interaction intuitive and engaging for users?  
    - Are the responses natural and contextually relevant?
 
-4. **Impact & Applicability (35%)**
+4. **Impact & Applicability (30%)**
    - How well does the solution address a real-world problem?  
    - Can the project be scaled or adapted for broader use cases?
 
@@ -174,7 +174,11 @@ The **Main** program integrates ASR, TTS, and LLM for a seamless conversational 
 ### Project Ideas
 - **Virtual Assistant**: Build a personalized voice assistant.  
 - **Interactive Learning**: Develop a language learning app.  
-- **Accessibility Tool**: Create tools for users with disabilities.  
+- **Accessibility Tool**: Create tools for users with disabilities.
+- **News Summarisation**: Fetch the latest news, generates concise summaries, and delivers them as personalized audio clips.
+- **Dynamic Storytelling**: Create interactive audiobooks, with the story adapting based on mood or context.
+- **TTS Fitness Coach**: Cirtual fitness coach that provides real-time, motivational voice instructions during workouts.
+- **AI Audioguides**:Design a tool for generating personalized audioguides for museums or attractions.
 
 ---
 
