@@ -3,7 +3,7 @@ import time
 
 
 def neuphonic_tts(input_text):
-    client = Neuphonic(api_key="your_api_key")
+    client = Neuphonic(api_key="b1c573c53dbd90eb11eb9b7da4a9266dd98095e9f9ec824c1165f52d2059bd9c.733eb921-6bbd-469a-b9b3-6444221382ae")
 
     sse = client.tts.SSEClient()
 
